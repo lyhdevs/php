@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8">
+        <title>Login de usuarios</title>
+        <link href="css/style.css" media=""screen" rel="stylesheet">
+    </head>
+    <body>
+        <div class="container mlogin">
+            <div id="login">
+                <h1>Login d usuario</h1>
+                <form name="loginform" id="loginform" action="login.php" method="POST">
+                    <p>
+                        <label for="user_login">nombre de usuario<br />
+                        <input type="text" name="username" id="username" class="input" value="" size="20" /></label>
+                    </p>
+                    <p>
+                        <label for="user_pass">contrasena<br />
+                        <input type="password" name="password" id="password" class="input" value="" size="20" /></label>
+                    </p>
+                    <p class="submit">
+                        <input type="submit" name="login" class="button" value="Entrar" />
+                    </p>
+                    <p class="regtext">no estas registrado?<a href="register.php">registrate aqui</a></p>
+                </form>
+            </div>
+        </div>
+    </body>
+</html>
