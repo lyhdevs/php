@@ -1,3 +1,4 @@
+
 <?php
 require_once("includes/connection.php");
 include("includes/header.php");
@@ -22,7 +23,7 @@ if(!empty($_POST['fullname']) && !empty($_POST['email']) && !empty($_POST['usern
        }
 
      if ($query->rowCount() == 0) {
-        $query = $connection->prepare ("INSERT INTO users(FULLNAME,USERNAME,PASSWORD,EMAIL) VALUES (:fullname,:username, :password_hash , :email)');
+        $query = $connection->prepare ('INSERT INTO users(FULLNAME,USERNAME,PASSWORD,EMAIL) VALUES (:fullname,:username, :password_hash , :email)');
         $query->bindParam("fullname", $full_name, PDO::PARAM_STR);
         $query->bindParam("username", $username, PDO::PARAM_STR);
         $query->bindParam("password_hash", $password_hash, PDO::PARAM_STR);
@@ -44,11 +45,13 @@ if(!empty($_POST['fullname']) && !empty($_POST['email']) && !empty($_POST['usern
        else{
        $message="Todos los campos deben ser completados";
       }
- }
+ 
 ?>
 
 <?php if (!empty($message)) {echo "<p class=\"error\">" . "Mensaje: ". $message . "</p>";} ?>
 
+<!DOCTYPE html>
+<html lang="en">
 <div class="container Mregister">
     <div id="login">
     <h1> Registrar </h1>
@@ -61,27 +64,28 @@ if(!empty($_POST['fullname']) && !empty($_POST['email']) && !empty($_POST['usern
 
     <p>
        <label for="user_pass">E-mail<br />
-       <input type="email" name"email" id="email" class="input" value="" size="32" /></label>
+       <input type="email" name="email" id="email" class="input" value="" size="32" /></label>
      </p>
 
 
     <p>
         <label for="user_pass">Nombre de usuario<br />
-       <input type="text" name"username" id="username" class="input" value="" size="20" /></label>
+       <input type="text" name="username" id="username" class="input" value="" size="20" /></label>
     </p>
 
     <p>
        <label for="user_pass">Constrasena<br />
-       <input type="password" name"password" id="password" class="input" value="" size="32" /></label>
+       <input type="password" name="password" id="password" class="input" value="" size="32" /></label>
     </p>
 
 
      <p class="submit">
        <input type="submit" name="register" id="register" class="button" value="Register"/>
      </p>
-    <p class="regtext"> Ya tienes una cuenta? <a href="login.php"> Entra aqui</a></p>
+    <p class="regtext"> Ya tienes una cuenta? <a href="./login.php"> Entra aqui</a></p>
  </form>
 </div>
 </div>
-<?php include("includes/footer.php"); ?>
+</html>
+<?php include("./footer.php"); ?>
 
