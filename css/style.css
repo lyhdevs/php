@@ -1,0 +1,16 @@
+body{
+    margin:0;
+    padding:0;
+    background-color: aqua;
+    font-family: 'Courier New', Courier, monospace;
+    height: 100vh;;
+}
+
+label{
+    height: 3px;
+    background-color: red;
+
+}
+input{
+    background-color: blue;
+}

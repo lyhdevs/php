@@ -32,7 +32,8 @@ if(!empty($_POST["login"])){
     }
 }
 ?>
-
+<!DOCTYPE html>
+<html lang="en">
 <div class="container mlogin">
        <div id="login">
     <h1>Autenticacion de usuario</h1>
@@ -54,5 +55,5 @@ if(!empty($_POST["login"])){
 </div>
 
 </div>
-
+</html>
 <?php if(!empty($message)) {echo "<p class=\"error\">" . "MESSAGE: ". $message . "</p>";}?>
